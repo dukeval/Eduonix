@@ -1,0 +1,68 @@
+.calculator {
+  border: 1px solid black;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.expression {
+  height: 70px;
+  border: 1px solid black;
+  margin: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: xx-large;
+  background: beige;
+}
+
+.expressionResult {
+  margin: 20px auto;
+}
+
+.numberRow {
+  margin: 10px;
+  background: gray;
+}
+
+.col1 {
+  padding: 10px 10px 10px 0;
+}
+.col2 {
+  padding: 10px 10px 10px 0;
+}
+.col3 {
+  padding: 10px 10px 10px 0;
+}
+.col4 {
+  padding: 10px 10px 10px 0;
+}
+
+.cell1 {
+  width: 70px;
+  display: inline-block;
+  padding: 5px;
+}
+.cell2 {
+  width: 70px;
+  display: inline-block;
+  padding: 5px;
+}
+.cell3 {
+  width: 70px;
+  display: inline-block;
+  padding: 5px;
+}
+.cell4 {
+  width: 70px;
+  display: inline-block;
+  padding: 5px;
+}
+.cell5 {
+  width: 70px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.keyPad {
+  width: 100%;
+  height: 50px;
+}

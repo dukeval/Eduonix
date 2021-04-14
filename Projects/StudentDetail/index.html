@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Student Detail</title>
+    <script src="student.js" defer="true"></script>
+    <link rel="stylesheet" href="student.css" />
+  </head>
+  <body>
+    <section>
+      <h1>Student Input</h1>
+      <div id="content">
+        <div class="studentRegistrationInfo">
+          <div>
+            <label for="name">Student Name:</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div>
+            <label for="address">Student Address:</label>
+            <input type="text" name="address" id="address" />
+          </div>
+          <div>
+            <label for="age">Student Age:</label>
+            <input type="number" name="age" id="age" />
+          </div>
+          <div>
+            <label for="class">Student Grade:</label>
+            <input type="text" name="grade" id="grade" />
+          </div>
+          <div>
+            <label for="name">Student Total:</label>
+            <input type="number" name="total" id="total" />
+          </div>
+        </div>
+        <div class="registerUserButton">
+          <button type="submit" onclick="registerUser()">Register User</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Output</h1>
+      <button type="submit" onclick="displayUser()">Display User</button>
+      <hr />
+      <ul id="studentList"></ul>
+    </section>
+  </body>
+</html>

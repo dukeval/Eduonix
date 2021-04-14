@@ -1,0 +1,81 @@
+<style></style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <div class="calculator">
+    <div class="result">
+      <div class="expression">
+        <div class="expressionResult">{{ expression }}</div>
+      </div>
+    </div>
+    <div class="numberRow">
+      <div class="firstRow">
+        <div class="col1 cell1">
+          <button class="keyPad" (click)="buttonClick($event)">7</button>
+        </div>
+        <div class="col2 cell2">
+          <button class="keyPad" (click)="buttonClick($event)">8</button>
+        </div>
+        <div class="col3 cell3">
+          <button class="keyPad" (click)="buttonClick($event)">9</button>
+        </div>
+        <div class="col4 cell3">
+          <button class="keyPad" (click)="buttonClick($event)">/</button>
+        </div>
+        <div class="col5 cell5">
+          <button class="keyPad" (click)="clear()">C</button>
+        </div>
+      </div>
+
+      <div class="secondRow">
+        <div class="col1 cell1">
+          <button class="keyPad" (click)="buttonClick($event)">4</button>
+        </div>
+        <div class="col2 cell2">
+          <button class="keyPad" (click)="buttonClick($event)">5</button>
+        </div>
+        <div class="col3 cell3">
+          <button class="keyPad" (click)="buttonClick($event)">6</button>
+        </div>
+        <div class="col4 cell3">
+          <button class="keyPad" (click)="buttonClick($event)">*</button>
+        </div>
+      </div>
+
+      <div class="thirdRow">
+        <div class="col1 cell1">
+          <button class="keyPad" (click)="buttonClick($event)">1</button>
+        </div>
+        <div class="col2 cell2">
+          <button class="keyPad" (click)="buttonClick($event)">2</button>
+        </div>
+        <div class="col3 cell3">
+          <button class="keyPad" (click)="buttonClick($event)">3</button>
+        </div>
+        <div class="col4 cell3">
+          <button class="keyPad" (click)="buttonClick($event)">-</button>
+        </div>
+      </div>
+
+      <div class="fourthRow">
+        <div class="col1 cell1">
+          <button class="keyPad" (click)="buttonClick($event)">0</button>
+        </div>
+        <div class="col2 cell2">
+          <button class="keyPad" (click)="buttonClick($event)">.</button>
+        </div>
+        <div class="col3 cell3">
+          <div class="keyPad">&nbsp;</div>
+        </div>
+        <div class="col4 cell4">
+          <button class="keyPad" (click)="buttonClick($event)">+</button>
+        </div>
+        <div class="col5 cell5">
+          <button class="keyPad" (click)="performOperation()">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
