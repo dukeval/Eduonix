@@ -30,9 +30,7 @@ export class MemberEditorComponent implements OnInit {
     this.activeRouter.params.subscribe(params=>{
       this.id=params.id;
       this.memberService.getMember(this.id).subscribe(res=>{
-        this.memberToEdit = res as member;
-        console.log(this.memberToEdit);
-        
+        this.memberToEdit = res as member;        
       });
     });
     

@@ -15,7 +15,6 @@ private URL: string = "https://607e491802a23c0017e8b135.mockapi.io/member";
     }
 
     this.http.post(this.URL,obj).subscribe(res =>{
-      console.log(res);      
     })
   }
 
@@ -32,9 +31,7 @@ private URL: string = "https://607e491802a23c0017e8b135.mockapi.io/member";
       MemberName, MemberBio, MemberAge
     }
 
-    this.http.put(`${this.URL}/${id}`, obj).subscribe(res=>{
-      console.log(res);
-      
+    this.http.put(`${this.URL}/${id}`, obj).subscribe(res=>{      
     })
   }
 
