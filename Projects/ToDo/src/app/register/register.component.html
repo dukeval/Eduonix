@@ -1,0 +1,34 @@
+<form [formGroup]="register" (ngSubmit)="registerUser()">
+  <div class="example-container">
+    <div class="content">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>User Name</mat-label>
+          <input
+            matInput
+            placeholder="xxxxx"
+            formControlName="userName"
+            required
+          />
+          <!-- <mat-error *ngIf="userName.invalid">{{ getErrorMessage() }}</mat-error> -->
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input
+            type="password"
+            matInput
+            placeholder="xxxxx"
+            formControlName="password"
+            required
+          />
+          <!-- <mat-error *ngIf="userName.invalid">{{ getErrorMessage() }}</mat-error> -->
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-raised-button color="primary">Register</button>
+      </div>
+    </div>
+  </div>
+</form>

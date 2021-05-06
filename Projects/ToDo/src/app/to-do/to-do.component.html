@@ -1,0 +1,60 @@
+<div class="container">
+  <div>
+    <h1>Welcome, {{ userName }}</h1>
+  </div>
+  <div class="badgeDisplay">
+    <div>
+      <mat-icon
+        color="primary"
+        [matBadge]="totalToDo"
+        matBadgeOverlap="false"
+        matBadgeSize="medium"
+        >list_alt</mat-icon
+      >
+    </div>
+    <div>
+      <a routerLink="/" routerLinkActive="active">
+        <mat-icon color="primary">logout</mat-icon></a
+      >
+    </div>
+  </div>
+
+  <div class="entry">
+    <div>
+      <mat-form-field floatLabel="auto" appearance="standard" color="primary">
+        <mat-label>To Do</mat-label>
+        <input
+          matInput
+          type="text"
+          name="newToDoInput"
+          [(ngModel)]="newToDoInput"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" (click)="addToList()">
+        Add
+      </button>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="display">
+      <div class="displayContent" *ngFor="let todo of toDos">
+        <div [@slide]>
+          <mat-selection-list #checkBox>
+            <mat-list-option
+              value="true"
+              (click)="
+                taskCompleted(checkBox.selectedOptions.selected[0]?.value)
+              "
+              (dblclick)="editTask($event)"
+              checkboxPosition="before"
+              [@toDoCompleted]="checkBox.selectedOptions.selected[0]?.value"
+            >
+              {{ todo }}
+            </mat-list-option>
+          </mat-selection-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
