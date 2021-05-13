@@ -1,0 +1,24 @@
+.empEdit {
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.empEdit button {
+  margin-right: 10px;
+}
+
+.empFormEntry {
+  width: 100%;
+}
+
+.empFormEntryLocation {
+  width: 31%;
+  padding-right: 12px;
+}
+
+.cardAvatar {
+  height: 300px;
+  width: 300px;
+}

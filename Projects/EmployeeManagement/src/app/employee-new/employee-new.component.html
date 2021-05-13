@@ -1,0 +1,137 @@
+<app-header-template title="{{ title }}"></app-header-template>
+<div class="empEdit">
+  <form [formGroup]="newEmpForm">
+    <div style="float: left">
+      <img
+        class="cardAvatar"
+        mat-card-xl-image
+        id="avatar"
+        #avatar
+        src="https://www.centralchristian.edu/wp-content/uploads/2019/07/person-placeholder.png"
+        alt="Photo of"
+      />
+    </div>
+    <div style="float: right">
+      <p>
+        <mat-form-field class="empFormEntry" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            formControlName="name"
+            #name
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="empFormEntry" appearance="outline">
+          <mat-label>Address</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            formControlName="address"
+            #address
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="empFormEntryLocation" appearance="outline">
+          <mat-label>City</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="city" />
+        </mat-form-field>
+        <mat-form-field class="empFormEntryLocation" appearance="outline">
+          <mat-label>State</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="state" />
+        </mat-form-field>
+        <mat-form-field class="empFormEntryLocation" appearance="outline">
+          <mat-label>Zip Code</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="zipcode" />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="empFormEntry" appearance="outline">
+          <mat-label>Department</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            formControlName="department"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="empFormEntry" appearance="outline">
+          <mat-label>Hired Date:</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            formControlName="datestarted"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="empFormEntry" appearance="outline">
+          <mat-label>Last Review Date:</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker2"
+            formControlName="lastreviewdate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker2"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="empFormEntry" appearance="outline">
+          <mat-label>Skills</mat-label>
+          <mat-chip-list #chipList aria-label="Fruit selection">
+            <mat-chip
+              *ngFor="let skill of skills"
+              [selectable]="selectable"
+              [removable]="removable"
+              (removed)="remove(skill)"
+            >
+              {{ skill.name }}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input
+              placeholder="New skill..."
+              [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+              [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)"
+            />
+          </mat-chip-list>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="empFormEntry" appearance="outline">
+          <mat-label>Bio</mat-label>
+          <textarea
+            rows="10"
+            cols="50"
+            matInput
+            placeholder="Placeholder"
+            formControlName="bio"
+            multiple="true"
+          ></textarea>
+        </mat-form-field>
+      </p>
+      <div class="empEdit">
+        <button mat-raised-button color="primary" (click)="createEmployee()">
+          Create Employee
+        </button>
+        <button mat-raised-button color="warn" (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

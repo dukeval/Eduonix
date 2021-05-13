@@ -1,0 +1,27 @@
+.example-container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  margin: 0 auto;
+  position: absolute;
+  top: 20%;
+  width: 50%;
+}
+
+.content div {
+  display: flex;
+  justify-content: center;
+}
+
+.spacing {
+  margin-left: 20px;
+}
+
+.invalid {
+  color: red;
+  font-weight: bolder;
+  font-size: large;
+  padding-bottom: 20px;
+}

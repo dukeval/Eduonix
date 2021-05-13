@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <span>{{ title }}</span>
+  <span class="example-spacer"></span>
+  <button
+    style="padding-right: 20px"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    (click)="addEmployee()"
+  >
+    <mat-icon>person_add_alt</mat-icon>
+  </button>
+  <label
+    mat-icon-button
+    [matBadge]="totalEmployee"
+    matBadgeColor="warn"
+    matBadgeOverlap="false"
+    matBadgeSize="medium"
+    class="example-icon people-icon"
+    aria-label="Example icon-button with people icon"
+  >
+    <mat-icon style="float: right">people</mat-icon>
+  </label>
+</mat-toolbar>

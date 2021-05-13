@@ -1,0 +1,65 @@
+<div>
+  <app-header-template
+    title="{{ title }}"
+    totalEmployee="{{ totalEmployeeCount }}"
+  ></app-header-template>
+  <div class="cardDisplay">
+    <div *ngFor="let emp of employees">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div
+            mat-card-avatar
+            class="example-header-image"
+            style="background-image:url('{{ emp.avatar }}')"
+          ></div>
+          <mat-card-title>{{ emp.name }}</mat-card-title>
+          <mat-card-subtitle
+            ><span class="label">Hired Date:</span>
+            {{ emp.datestarted }}</mat-card-subtitle
+          >
+          <mat-card-subtitle
+            ><span class="label">Last Review Date:</span>
+            {{ emp.lastreviewdate }}</mat-card-subtitle
+          >
+        </mat-card-header>
+        <img
+          class="cardAvatar"
+          mat-card-xl-image
+          id="avatar"
+          src="{{ emp.avatar }}"
+          alt="Photo of {{ emp.name }}"
+        />
+        <mat-card-content>
+          <div>
+            <p><span class="label">Address:</span> {{ emp.address }}</p>
+            <p>
+              <span class="cardSection"
+                >{{ emp.city }}, {{ emp.state }} {{ emp.zipcode }}</span
+              >
+            </p>
+          </div>
+          <div>
+            <p class="label">Department:</p>
+            <p>
+              <span class="cardSection"> {{ emp.department }}</span>
+            </p>
+          </div>
+          <div>
+            <p class="label">Skills:</p>
+            <p>
+              <span class="cardSection"> {{ emp.skills }}</span>
+            </p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="button">
+          <button mat-button color="primary" (click)="updateEmployee(emp.id)">
+            Update
+          </button>
+          <button mat-button color="warn" (click)="deleteEmployee(emp.id)">
+            Delete
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
