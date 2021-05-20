@@ -22,8 +22,10 @@ export class RegisterComponent implements OnInit {
   }
 
   registerUser():void{
-    this.authenticateUser.userRegistration(this.register.get('userName')?.value, this.register.get('password')?.value).subscribe(value=>{
-      this.route.navigate(['/']);
-    });
+    if(this.register.valid){
+      this.authenticateUser.userRegistration(this.register.get('userName')?.value, this.register.get('password')?.value).subscribe(value=>{
+        this.route.navigate(['/']);
+      });
+    }
   }
 }

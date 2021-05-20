@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <span>{{ title }}</span>
+  <span id="title">{{ title }}</span>
   <span class="example-spacer"></span>
   <button
     style="padding-right: 20px"
@@ -11,6 +11,7 @@
     <mat-icon>person_add_alt</mat-icon>
   </button>
   <label
+    id="employeeBadge"
     mat-icon-button
     [matBadge]="totalEmployee"
     matBadgeColor="warn"

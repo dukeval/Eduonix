@@ -1,7 +1,7 @@
 <form [formGroup]="login" (ngSubmit)="authenticate()">
   <div class="example-container">
     <div class="content">
-      <div>
+      <div id="err">
         <mat-label class="invalid" *ngIf="!accessGranted"
           >Invalid Credentials</mat-label
         >

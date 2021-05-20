@@ -18,8 +18,8 @@ export class EmployeeGetComponent implements OnInit {
   constructor(private empService: EmployeeService,private route:Router,private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-    if(!sessionStorage.getItem("isEmployeeLogin"))
-      this.route.navigate(['/login']);
+    if(sessionStorage.getItem("isEmployeeLogin")== null || sessionStorage.getItem("isEmployeeLogin")=="false")
+      this.route.navigate(['login']);
 
     this.empService.getEmployees().subscribe(result=>{
       this.employees = result as Employee[];

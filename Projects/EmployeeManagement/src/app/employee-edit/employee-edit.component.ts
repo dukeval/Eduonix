@@ -46,8 +46,8 @@ export class EmployeeEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(!sessionStorage.getItem("isEmployeeLogin"))
-      this.route.navigate(['/login']);
+    if(sessionStorage.getItem("isEmployeeLogin")== null || sessionStorage.getItem("isEmployeeLogin")=="false")
+      this.route.navigate(['login']);
 
     this.activateRoute.params.subscribe(parameter=>{
       this.id = parameter.id;

@@ -6,7 +6,7 @@ import Employee from './Employee';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private URL: string = "https://607e491802a23c0017e8b135.mockapi.io/employee";
+  URL: string = "https://607e491802a23c0017e8b135.mockapi.io/employee";
 
   constructor(private http:HttpClient) { }
 

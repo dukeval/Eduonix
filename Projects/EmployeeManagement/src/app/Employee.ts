@@ -2,13 +2,13 @@ export default class Employee{
     id!:number;
     name!: string;
     avatar!: string;
-    address!: number;
+    address!: string;
     city!: string;
     state!: string;
     zipcode!: number;
     datestarted!: Date;
     department!: string;
-    bio!: number;
+    bio!: string;
     skills!: string;
     createdAt!:Date;
     lastreviewdate!: Date;
